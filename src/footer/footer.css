@@ -1,0 +1,81 @@
+.footerTopSection{
+    background-color: #7C4EE4;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 80px 0;
+    gap: 20px;
+}
+.footerTopSection h1{
+    color:white;
+    font-size: xxx-large;
+    text-align: center;
+}
+.footerTopSection input{
+    padding: 10px 10px;
+   border-radius: 6px;
+   border:none;
+}
+
+.footerTopSection button{
+    border:1px solid white;
+    color: white;
+    border-radius: 6px;
+    background-color: transparent;
+    font-size: 14px;
+    font-weight: 100;
+    padding: 10px 30px;
+    margin-left: 10px;
+}
+.footerTopSection p{
+    color: #bbbbbb;
+    text-align: center;
+}
+
+#footerLogo{
+    display: flex;
+    padding: 20px 0;
+    justify-content: center;
+}
+
+
+#footerLogo .logoimg{
+    display: flex;
+    flex-direction: row;
+    padding: 10px 0 5px;
+    align-items: center;
+}
+.logoimg p{
+    font-size: 28px;
+    color: black;
+    text-decoration: none;
+    margin-bottom: 0 !important;
+
+}
+
+.footerNav{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+    list-style: none;
+    color: inherit;
+
+}
+.footerNav li{
+    margin: 0 30px;
+}
+.footerNav li a{
+    font-size: 18px;
+    font-weight: 100;
+    color: inherit;
+    text-decoration: none;
+}
+.horizon{
+    color: #7C4EE4;
+    background-color: #7C4EE4;
+    border: none;
+    height: 3px;
+    margin: 0 120px;
+}

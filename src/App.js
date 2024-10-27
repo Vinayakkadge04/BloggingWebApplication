@@ -4,6 +4,7 @@ import HomeScreen from './HomeScreen/HomeScreen'
 import {BrowserRouter  , Routes , Route} from 'react-router-dom'
 import BlogPage from './BlogPage/BlogPage';
 import About from './About/About';
+import Contact from './Contact/Contact';
 
 export default function App() {
   return (
@@ -13,6 +14,7 @@ export default function App() {
         <Route path='/' element={<HomeScreen/>}/>
         <Route path='/blogs' element={<BlogPage/>}/>
         <Route path='/about' element={<About/>}/>
+        <Route path='/contact' element={<Contact/>}/>
     </Routes>
    
     </BrowserRouter>

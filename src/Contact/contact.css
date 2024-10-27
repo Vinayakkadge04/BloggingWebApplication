@@ -1,0 +1,95 @@
+#contactTop{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    gap:20px;
+    padding:60px 0;
+}
+#contactTop h1{
+    text-align: center;
+    font-size: 58px;
+    font-weight: 600;
+}
+#contactTop p{
+    text-align: center;
+    color: #666666;
+    font-size: 18px;
+    font-weight: 100;
+    width: 85%;
+}
+.myCard{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    background-color: white;
+    border-radius: 14px;
+    padding: 40px 0;
+}
+
+.iconBg{
+    height: 80px;
+    width: 80px;
+    border-radius: 40px;
+    background-color: #7C4EE4;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.cardIcon{
+    font-size: 44px;
+    color: white;
+}
+.myCard h5{
+    color: #7C4EE4;
+}
+.myCard p{
+    color: #666666;
+    opacity: 0.5;
+
+}
+
+.mapImg{
+    width: 100%;
+    object-fit: contain;
+  
+}
+
+.contactForm{
+    width: 50%;
+    background-color: white;
+    border-radius: 16px;
+    padding: 70px;
+    padding-top: 40px;
+    position: absolute;
+    top: 50%;
+   
+}
+.contactForm label{
+    color: #666666;
+    margin-bottom: 5px;
+
+}
+.contactForm input,
+.contactForm textarea{
+    border: 1px solid rgba(0,0,0,0.2);
+    border-radius: 6px;
+    padding: 10px;
+    margin-bottom: 20px;
+}
+
+.formSection{
+    padding: 60px 0;
+    display: flex;
+    position: relative;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 20%;
+}
+.formField{
+    display: flex;
+    flex-direction: column;
+}

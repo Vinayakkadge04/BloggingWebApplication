@@ -9,9 +9,9 @@ export default function BlogPage() {
     <>
       <TopBar />
       <div className="main">
-      <div className="container" id="aboutTop">
+      <div className="container" id="blogTop">
         <h6>OUR BLOGS</h6>
-        <h2>Find our all blogs from here</h2>
+        <h1>Find our all blogs from here</h1>
         <p>
           our blogs are written from very research research and well known
           writers writers so that we can provide you the best blogs and articles

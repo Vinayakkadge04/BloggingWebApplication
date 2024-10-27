@@ -94,16 +94,16 @@ export default function Footer() {
         <div >
             <ul className="footerNav">
                 <li>
-                    <a href="#">Home</a>
+                    <a href={"/"}>Home</a>
                 </li>
                 <li>
-                    <a href="#">Blog</a>
+                    <a href={"/blogs"}>Blog</a>
                 </li>
                 <li>
-                    <a href="#">About</a>
+                    <a href={"/about"}>About</a>
                 </li>
                 <li>
-                    <a href="#">Contact Us</a>
+                    <a href={"/contact"}>Contact Us</a>
                 </li>
             </ul>
         </div>

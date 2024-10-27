@@ -14,7 +14,7 @@ export default function Footer() {
         </div>
         <p>
           Get a response tomorrow if you submit by 9pm today. If we received
-          after <br />
+          after
           9pm will get a reponse the following day.
         </p>
       </div>

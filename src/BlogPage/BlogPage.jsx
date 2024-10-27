@@ -22,7 +22,7 @@ export default function BlogPage() {
         </div>
 
         <div id="postGrid" className="row">
-          <div className="col-md-4 mb-5 col-sm-12">
+          <div className="col-lg-4 col-md-6 col-sm-12">
             <img src={post1} alt="" />
             <div className="d-flex gap-2 mt-3">
               <h6>Travel</h6>
@@ -39,7 +39,7 @@ export default function BlogPage() {
             </a>
           </div>
 
-          <div className="col-md-4 mb-5 col-sm-12">
+          <div className="col-lg-4 col-md-6 col-sm-12 mb-5 col-sm-12">
             <img src={post2} alt="" />
             <div className="d-flex gap-2 mt-3">
               <h6>Travel</h6>
@@ -56,7 +56,7 @@ export default function BlogPage() {
             </a>
           </div>
 
-          <div className="col-md-4 col-sm-12 mb-5 pb-5">
+          <div className="col-lg-4 col-md-6 col-sm-12 mb-5 pb-5">
             <img src={post3} alt="" />
             <div className="d-flex gap-2 mt-3">
               <h6>Travel</h6>
@@ -73,7 +73,7 @@ export default function BlogPage() {
             </a>
           </div>
 
-          <div className="col-md-4 col-sm-12 mb-5 pb-5">
+          <div className="col-lg-4 col-md-6 col-sm-12 mb-5 pb-5">
             <img src={post1} alt="" />
             <div className="d-flex gap-2 mt-3">
               <h6>Travel</h6>

@@ -79,3 +79,25 @@
     height: 3px;
     margin: 0 120px;
 }
+
+@media screen and (max-width :430px){
+    .footerTopSection h1{
+        font-size: 23px;
+    }
+    .footerTopSection input{
+        padding: 5px;
+    }
+    .footerTopSection p{
+        margin: 0 20px;
+    }
+    .footerTopSection button{
+        padding: 5px 10px;
+    }
+    .footerNav{
+        flex-direction: column;
+        padding: 0;
+    }
+    .horizon{
+        margin: 20px;
+    }
+}

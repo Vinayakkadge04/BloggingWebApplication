@@ -74,13 +74,15 @@ nav{
         justify-content: space-evenly;
         position: fixed;
         right:-780px;
+        z-index: 5;
         width: 100%;
-        background-color:aquamarine;
-        height:150px;
+        background-color: white;
+        height:50%;
         box-shadow: 0 40px 60px rgba(0,0,0,0.1);
         padding: 0px 0 0 10px;
-        top:85px;
+        top:60px;
         transition: all 0.5s linear;
+        opacity: 1;
 
     }  
     #navlist.active{

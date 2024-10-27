@@ -17,7 +17,7 @@ export default function HomeScreen() {
 
 
     <div className="row topSection">
-        <div className="col topLeftSection">
+        <div className="col-lg-6 col-md-6 col-sm-12 topLeftSection">
           <p>Featured Post</p>
           <h2>How AI will Change the Future</h2>
           <p>
@@ -27,7 +27,7 @@ export default function HomeScreen() {
           </p>
           <div className="secondBtn">Read More</div>
         </div>
-        <div className="col topRightSection">
+        <div className="col-lg-6 col-md-6 col-sm-12 topRightSection">
           <img src={homeBanner} alt="" />
         </div>
       </div>
@@ -64,10 +64,10 @@ export default function HomeScreen() {
       </div>
       {/* recent Post section 2 */}
       <div className="row mainPost">
-        <div className="col-md-6 col-sm-12 mainPostLeft">
+        <div className="col-md-5 col-sm-12 mainPostLeft">
           <img className="postImg" src={homeb2} alt="" />
         </div>
-        <div className="col-md-6 col-sm-12 mainPostRight">
+        <div className="col-md-7 col-sm-12 mainPostRight">
           <div className="d-flex gap-3">
             <h6>DEVELOPMENT</h6>
             <h6>16 March 2024</h6>
@@ -89,7 +89,7 @@ export default function HomeScreen() {
       {/* Grid Section */}
 
       <div className="row category">
-        <div className="col-md-4 mb-5 col-sm-12">
+        <div className="col-lg-4 col-md-6 mb-5 col-sm-12">
           <img src={post1} alt="" />
           <div className="d-flex gap-2 mt-3">
             <h6>Travel</h6>
@@ -107,7 +107,7 @@ export default function HomeScreen() {
         </div>
 
 
-        <div className="col-md-4 mb-5 col-sm-12">
+        <div className="col-lg-4 col-md-6 mb-5 col-sm-12">
           <img src={post1} alt="" />
           <div className="d-flex gap-2 mt-3">
             <h6>Travel</h6>
@@ -124,7 +124,7 @@ export default function HomeScreen() {
             </h4></a>
         </div>
 
-        <div className="col-md-4 col-sm-12 mb-5 pb-5">
+        <div className="col-lg-4 col-md-6 mb-5 col-sm-12">
           <img src={post1} alt="" />
           <div className="d-flex gap-2 mt-3">
             <h6>Travel</h6>

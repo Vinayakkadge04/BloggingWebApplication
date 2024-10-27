@@ -65,6 +65,59 @@
     opacity: 0.7;
     width: 90%;
 }
+@media screen and (max-width :990px){
+    #workTextHead .left{
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+
+    }
+    #workTextHead .left h1{
+        font-size: 40px;
+    }
+    #workTextHead .right{
+        align-items: center;
+        justify-content: center;
+    }
+    #aboutTop {
+        gap: 0;
+    }
+    #aboutTop h1{
+        font-size: 40px;
+    }
+    .cardView h1{
+       font-size: 40px;
+    }
+    .cardView p{
+       font-size: 12px;
+    }
+}
+@media screen and (max-width :440px){
+    .cardView{
+        margin: 10px 20px;
+    }
+    #workTextHead .left{
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        gap: 0;
+
+    }
+    .imgContainer{
+        padding-top:0 ;
+    }
+    #workTextHead .left h1{
+        font-size: 20px;
+    }
+    #workTextHead p{
+        font-size: 14px;
+        text-align: center;
+    }
+    #workTextHead .right{
+        align-items: center;
+        justify-content: center;
+    }
+}
 
 /* .cardView:hover{
     background-color: #7C4EE4;

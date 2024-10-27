@@ -1,6 +1,5 @@
 .main{
     background-color: #f6f6f6;
-   
     padding: 0 120px;
 }
 #blogTop{
@@ -44,4 +43,13 @@
 #postGrid a{
     color:#7C4EE4;
     text-decoration: none;
+}
+@media screen and (max-width :760px){
+    #blogTop{
+        gap: 0;
+
+    }
+    #blogTop h1{
+        font-size: 40px;
+    }
 }

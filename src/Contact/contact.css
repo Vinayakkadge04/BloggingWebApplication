@@ -28,7 +28,11 @@
     border-radius: 14px;
     padding: 40px 0;
 }
-
+.cardSection{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
 .iconBg{
     height: 80px;
     width: 80px;
@@ -93,3 +97,52 @@
     display: flex;
     flex-direction: column;
 }
+@media screen and (max-width :990px){
+    .iconBg{
+       height: 50px;
+       width: 50px;
+    }
+    .cardIcon{
+        font-size: 22px;
+    }
+    .myCard{
+        gap: 10px;
+    }
+    .myCard p{
+        margin: 0;
+        font-size: 12px;
+    }
+    .myCard h5{
+        font-size: 16px;
+    }
+    .formSection{
+        margin-bottom: 40%;
+    }
+    .contactForm{
+        padding: 40px;
+        width: 60%;
+    }
+    .contactForm input, .contactForm textarea{
+        padding: 0;
+    }
+}
+
+@media screen and (max-width :440px){
+    .myCard{
+        width: 70%;
+    }
+    .contactForm{
+        position: relative;
+        width: 80%;
+        margin: 20px 0;
+
+    }
+    .formSection{
+        margin-bottom: 20px;
+    }
+    #contactTop h1{
+        font-size: 40px;
+    }
+    
+}
+

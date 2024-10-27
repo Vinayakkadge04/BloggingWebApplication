@@ -25,15 +25,15 @@ export default function Contact() {
         </div>
 
         <div className="cardSection gap-3 row">
-          <div className="col myCard">
+          <div className="col-lg-3 col-md-3 col-sm-12 myCard">
             <div className="iconBg">
               <FontAwesomeIcon className="cardIcon" icon={faHouse} />
             </div>
             <h5>Office</h5>
             <p>Shubham Complex, Agashi, Virar</p>
-          </div>
+          </div> 
 
-          <div className="col myCard">
+          <div className="col-lg-3 col-md-3 col-sm-12 myCard">
             <div className="iconBg">
               <FontAwesomeIcon className="cardIcon" icon={faEnvelopeOpen} />
             </div>
@@ -41,7 +41,7 @@ export default function Contact() {
             <p>vinayak@hexagn.in</p>
           </div>
 
-          <div className="col myCard">
+          <div className="col-lg-3 col-md-3 col-sm-12 myCard">
             <div className="iconBg">
               <FontAwesomeIcon className="cardIcon" icon={faPhone} />
             </div>
@@ -49,20 +49,20 @@ export default function Contact() {
             <p>+91 8806204889</p>
           </div>
         </div>
-        <div>
+        
           <div className="formSection">
             <img className="mapImg" src={map} alt="" />
             <div className="contactForm">
               <form>
                 <div className="row">
-                  <div className="col-6 formField">
+                  <div className="col-lg-6 col-md-6 col-sm-12 formField">
                     <label>Name</label>
                     <input type="text" />
 
                     <label>Phone</label>
                     <input type="text" />
                   </div>
-                  <div className="col-6 formField">
+                  <div className="col-lg-6 col-md-6 col-sm-12 formField">
                     <label>Email</label>
                     <input type="text" />
                     <label>Subject</label>
@@ -80,8 +80,7 @@ export default function Contact() {
             </div>
           </div>
         </div>
-      </div>
-
+  
       <Footer />
     </>
   );

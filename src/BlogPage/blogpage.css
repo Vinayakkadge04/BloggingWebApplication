@@ -1,0 +1,37 @@
+.main{
+    background-color: #f6f6f6;
+   
+    padding: 0 120px;
+}
+#blogTop{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    gap:20px;
+    padding:40px 0;
+}
+#blogTop p{
+    text-align: center;
+    color: #666666;
+}
+#blogTop h6{
+    color: #666666;
+}
+#postGrid{
+   
+    display: flex;
+    flex-wrap: wrap;
+}
+#postGrid img{
+    width:100%
+
+}
+#postGrid p{
+    color: #666666;
+    font-size: 18px; 
+}
+#postGrid a{
+    color:#7C4EE4;
+    text-decoration: none;
+}

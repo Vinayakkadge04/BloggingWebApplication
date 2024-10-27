@@ -1,0 +1,87 @@
+#aboutTop{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    gap:20px;
+    padding:60px 0;
+}   
+#aboutTop p{
+    text-align: center;
+    color: #666666;
+    font-size: 18px;
+    font-weight: 100;
+    width: 85%;
+}
+#aboutTop h6{
+    color: #666666;
+    font-size: 16px;
+}
+#aboutTop h1{
+    text-align: center;
+    font-size: 58px;
+    font-weight: 600;
+}
+.imgAbout{
+    width: 100%;
+
+}
+.imgContainer{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 40px 0;
+}
+#workTextHead p{
+    color: #666666;
+}
+#workTextHead .right{
+    display: flex;
+    align-items: end;
+    justify-content: start;
+}   
+#workTextHead .left{
+    display: flex;
+    flex-direction: column;
+    gap: 26px;
+}
+#workTextHead .left h1{
+    font-weight: 500;
+    font-size:58px;
+}
+.cardView{
+    margin: 60px 0;
+}
+.cardView h1{
+    color: #666666;
+    font-size: 64px;
+    opacity: 0.3;
+}
+.cardView h4{
+    color: #7C4EE4;
+}
+.cardView p{
+    color: #666666;
+    opacity: 0.7;
+    width: 90%;
+}
+
+/* .cardView:hover{
+    background-color: #7C4EE4;
+}
+.cardView h1:hover{
+    color: #fff;
+    font-size: 64px;
+    opacity: 1;
+}
+.cardView h4 :hover{
+    color: #7C4EE4;
+}
+.cardView p:hover{
+    color: #fff;
+    opacity: 1;
+}
+.cardView h6:hover{
+    display: block;
+} */
+

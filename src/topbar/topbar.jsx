@@ -1,7 +1,8 @@
 import React, { Component } from "react";
 import "./topbar.css";
 import "../global.css";
-
+import {NavLink} from 'react-router-dom'
+ 
 class TopBar extends Component {
   state={clicked:false};
 
@@ -13,7 +14,7 @@ class TopBar extends Component {
     return (
       <div className="title">
         <nav>
-          <a href="#">
+          <NavLink to="/">
             <div id="logo">
             <svg
               id="logo-64"
@@ -81,25 +82,25 @@ class TopBar extends Component {
             </svg>
             <p id="logoTitle">MyLogo</p>
             </div>
-          </a>
+          </NavLink>
           <div>
             <ul id="navlist" className={this.state.clicked ? "#navlist active" : "navlist"}>
               <li>
-                <a href="#">Home</a>
+                <NavLink to="/">Home</NavLink>
               </li>
               <li>
-                <a href="#">Blog</a>
+                <NavLink to="/blogs">Blog</NavLink>
               </li>
               <li>
-                <a href="#">About</a>
+                <NavLink to="/about">About</NavLink>
               </li>
               <li>
                
-                <a href="#">
+                <NavLink to="/contact">
                   <div className="primaryButton">
                     Contact Us
                   </div>
-                </a>
+                </NavLink>
                 
                 
               </li>

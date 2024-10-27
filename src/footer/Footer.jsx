@@ -111,7 +111,7 @@ export default function Footer() {
         <hr className="horizon"/>
         <div className="footerNav mt-3 mb-3">
         <p>
-        Copyright Hexagn © 2023. All Right Reserved
+        Copyright Hexagn © 2024. All Right Reserved
         </p>
         </div>
     </>

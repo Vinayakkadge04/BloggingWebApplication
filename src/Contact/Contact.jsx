@@ -7,7 +7,7 @@ import {
   faHouse,
   faPhone,
   faEnvelopeOpen,
-  faP,
+ 
 } from "@fortawesome/free-solid-svg-icons";
 import map from "../assets/images/map.png";
 

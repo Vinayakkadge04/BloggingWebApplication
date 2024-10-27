@@ -15,7 +15,8 @@ export default function HomeScreen() {
 
       {/* Top Section */}
 
-      <div className="row topSection">
+
+    <div className="row topSection">
         <div className="col topLeftSection">
           <p>Featured Post</p>
           <h2>How AI will Change the Future</h2>
@@ -32,7 +33,7 @@ export default function HomeScreen() {
       </div>
 
       {/* Second Section */}
-
+      <div className="main">
       <div className="section2">
         <div className="banner">
           <img className="w-100" src={homeBanner2} alt="" />
@@ -141,6 +142,8 @@ export default function HomeScreen() {
         </div>
 
       </div>
+    </div>
+     
 
 
       {/* Footer Top  */}

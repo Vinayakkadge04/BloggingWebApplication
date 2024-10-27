@@ -1,6 +1,6 @@
 .topSection{
     background-color: #7C4EE4;
-    padding:120px;
+    padding:120px 120px;
     align-items: center;
     justify-content: center;
 }
@@ -29,13 +29,13 @@
     justify-content: end;
 }
 .section2{
-    padding:80px 120px;
+    padding:80px 0;
     position: relative;
     background-color: #f6f6f6;
 }
 .section2Text{
     background-color: white;
-    padding:40px;
+    padding:40px 60px;
     position: absolute;
     right:126px;
     max-width:60%;
@@ -47,7 +47,7 @@
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
-    padding: 80px 120px 30px;
+    padding: 80px 0 30px;
     background-color: #f6f6f6;
 }
 .recentPost h1{
@@ -58,7 +58,7 @@
     align-items: center;
     justify-content: center;
     background-color: #f6f6f6;
-    padding: 0px 120px 60px;
+    padding: 0px 0 60px;
 }
 .mainPostLeft{
     background-color: #fff;
@@ -88,7 +88,7 @@
     line-height: 50px;
 }
 .category{
-    padding: 0 120px;
+
     background-color: #f6f6f6;
     display: flex;
     gap:10

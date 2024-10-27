@@ -109,9 +109,9 @@ export default function Footer() {
         </div>
 
         <hr className="horizon"/>
-        <div className="footerNav mt-3 mb-3">
+        <div className="footerNav mt-3">
         <p>
-        Copyright Hexagn © 2024. All Right Reserved
+        Copyright © 2024. All Right Reserved
         </p>
         </div>
     </>

@@ -1,0 +1,22 @@
+.detailTop p{
+    color: #666;
+    opacity: 0.5;
+} 
+.detailTop{
+    padding: 80px;
+}  
+.detailTop h1{
+   margin-top: 40px;
+   font-size: 60px;
+   font-weight: 600;
+   opacity: 0.8;
+}
+.postBanner{
+    width: 100%;
+}
+.discription{
+    color: #666;
+    opacity: 0.8;
+    padding: 80px 80px 0 80px;
+    font-size: 22px;
+}

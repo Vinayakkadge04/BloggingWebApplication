@@ -21,6 +21,7 @@
     text-align: center;
     font-size: 58px;
     font-weight: 600;
+    width: 80%;
 }
 .imgAbout{
     width: 100%;
@@ -51,6 +52,14 @@
 }
 .cardView{
     margin: 60px 0;
+    transition: all 0.3s ease-in;
+    padding: 20px;
+  
+}
+.cardGrid{
+    display: grid;
+    grid-template-columns: repeat(3,1fr ); 
+    gap: 20px;
 }
 .cardView h1{
     color: #666666;
@@ -64,6 +73,12 @@
     color: #666666;
     opacity: 0.7;
     width: 90%;
+}
+.cardSection{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
 }
 @media screen and (max-width :990px){
     #workTextHead .left{
@@ -117,24 +132,33 @@
         align-items: center;
         justify-content: center;
     }
+    #aboutTop h1{
+        font-size: 24px;
+    }
+    #aboutTop p{
+        font-size: 11px;
+    }
+    #aboutTop h6{
+        font-size: 11px;
+    }
 }
 
-/* .cardView:hover{
+.cardView:hover{
     background-color: #7C4EE4;
+    border-radius: 12px;
+    padding: 20px;
+    transition: all 0.4s ease-in-out;
 }
-.cardView h1:hover{
+.cardView:hover h1{
     color: #fff;
-    font-size: 64px;
-    opacity: 1;
+   
 }
-.cardView h4 :hover{
-    color: #7C4EE4;
+.cardView:hover h4{
+    color: white;
 }
-.cardView p:hover{
-    color: #fff;
-    opacity: 1;
+.cardView:hover p{
+    color: #f6f6f6;
+ 
 }
-.cardView h6:hover{
-    display: block;
-} */
+
 

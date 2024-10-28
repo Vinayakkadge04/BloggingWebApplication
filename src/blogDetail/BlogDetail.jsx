@@ -6,6 +6,8 @@ import postImg from "../assets/images/homeBanner2.png";
 import post1 from '../assets/images/post1.png'
 import post2 from '../assets/images/post2.png'
 import post3 from '../assets/images/post3.png'
+import {data} from '../component/blog';
+import SingleBlog from "../component/singleBlog";
 
 export default function BlogDetail() {
   return (
@@ -49,51 +51,12 @@ export default function BlogDetail() {
 
 
       <div className="row category">
-        <div className="col-md-4 mb-5 col-sm-12">
-          <img src={post1} alt="" />
-          <div className="d-flex gap-2 mt-3">
-            <h6>Travel</h6>
-            <h6>13 March 2024</h6>
-          </div>
-          <h2>Who is the best singer on chart?Know him?</h2>
-          <p>
-          chart by Billboard which ranks the all-time greatest artists based on their performance on the weekly Billboard Hot 100 and  
-          </p>
-          <a href="#"><h4>
-            Read More...
-            </h4></a>
-        </div>
 
-
-        <div className="col-md-4 mb-5 col-sm-12">
-          <img src={post2} alt="" />
-          <div className="d-flex gap-2 mt-3">
-            <h6>Travel</h6>
-            <h6>13 March 2024</h6>
-          </div>
-          <h2>How to start export import business from home?</h2>
-          <p>
-          Capitalize on low hanging fruit to identify a ballpark value added activity to beta test. Override the digital divide with additional clickthroughs 
-          </p>
-          <a href="#"><h4>
-            Read More...
-            </h4></a>
-        </div>
-
-        <div className="col-md-4 col-sm-12 mb-5 pb-5">
-          <img src={post3} alt="" />
-          <div className="d-flex gap-2 mt-3">
-            <h6>Travel</h6>
-            <h6>13 March 2024</h6>
-          </div>
-          <h2>Make some drinks with chocolates chocolates and milk</h2>
-          <p>
-          Organically grow the holistic world view of disruptive innovation via workplace diversity and empowerment. survival strategies to ensure proactive
-          </p>
-          <a href="#"><h4>
-            Read More...
-            </h4></a>
-        </div>
+        {
+          data.map((item , index)=>{
+            return <SingleBlog data ={item}/>
+          })
+        }
 
       </div>
 

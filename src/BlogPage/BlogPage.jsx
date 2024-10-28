@@ -1,10 +1,9 @@
 import React from "react";
 import TopBar from "../topbar/topbar";
 import Footer from "../footer/Footer";
-import post1 from "../assets/images/post1.png";
-import post2 from "../assets/images/post2.png";
-import post3 from "../assets/images/post3.png";
+import {data} from "../component/blog"
 import "./blogpage.css";
+import SingleBlog from "../component/singleBlog";
 
 export default function BlogPage() {
   return (
@@ -22,7 +21,14 @@ export default function BlogPage() {
         </div>
 
         <div id="postGrid" className="row">
-          <div className="col-lg-4 col-md-6 col-sm-12">
+          {
+            data.map((item,index)=>{
+              return <SingleBlog data = {item}/>
+            })
+          }
+
+          
+          {/* <div className="col-lg-4 col-md-6 col-sm-12">
             <img src={post1} alt="" />
             <div className="d-flex gap-2 mt-3">
               <h6>Travel</h6>
@@ -87,7 +93,7 @@ export default function BlogPage() {
             <a href={"/detail"}>
               <h4>Read More...</h4>
             </a>
-          </div>
+          </div> */}
         </div>
       </div>
 

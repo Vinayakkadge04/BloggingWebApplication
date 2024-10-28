@@ -53,3 +53,18 @@
         font-size: 40px;
     }
 }
+
+@media screen and (max-width :440px){
+    .main{
+        padding: 0 20px;
+    }
+    #blogTop h1{
+        font-size: 24px;
+    }
+    #blogTop p{
+        font-size: 11px;
+    }
+    #blogTop h6{
+        font-size: 11px;
+    }
+}

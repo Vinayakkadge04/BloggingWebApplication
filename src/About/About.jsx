@@ -41,7 +41,7 @@ export default function About() {
         </div>
 
         <div className="cardGrid">
-          <div className=" cardView">
+          <div className="cardView">
             <h1>01</h1>
             <h4>Brainstorming</h4>
             <p>
@@ -53,7 +53,7 @@ export default function About() {
             
           </div>
 
-          <div className=" cardView">
+          <div className="cardView">
             <h1>02</h1>
             <h4>Analysis</h4>
             <p>
@@ -66,7 +66,7 @@ export default function About() {
             
           </div>
 
-          <div className=" cardView">
+          <div className="cardView">
             <h1>03</h1>
             <h4>News Publishing</h4>
             <p>

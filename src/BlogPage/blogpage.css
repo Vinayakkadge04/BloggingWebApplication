@@ -11,6 +11,10 @@
     padding:40px 0;
    
 }
+.blogImg{
+    width: 230px;
+    height: 330px;
+}
 #blogTop h1{
     text-align: center;
     font-size: 58px;
@@ -43,6 +47,17 @@
 #postGrid a{
     color:#7C4EE4;
     text-decoration: none;
+}
+.pageButton{
+    background-color: #7C4EE4;
+    color: #f6f6f6;
+    padding: 5px 12px;
+    
+}
+.pagenationControl{
+    display: flex;
+   
+    justify-content: end;
 }
 @media screen and (max-width :760px){
     #blogTop{

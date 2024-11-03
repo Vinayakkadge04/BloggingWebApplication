@@ -1,11 +1,48 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import TopBar from "../topbar/topbar";
 import Footer from "../footer/Footer";
-import {data} from "../component/blog"
 import "./blogpage.css";
 import SingleBlog from "../component/singleBlog";
+import axios from "axios";
+import { URL } from "../Utils/const";
+// import { data } from "../component/blog";
 
 export default function BlogPage() {
+  const [data, setdata] = useState([]);
+
+  const [currentPage, setCurrentPage] = useState(1);
+  const [itemsPerPage] = useState(3);
+
+  const indexOfLastBlog = currentPage * itemsPerPage;
+  const indexOfFirstBlog = indexOfLastBlog - itemsPerPage;
+  const currentBlogs = data.slice(indexOfFirstBlog, indexOfLastBlog);
+
+  const totalPages = Math.ceil(data.length / itemsPerPage);
+
+  const handleNextPage = () => {
+    if (currentPage < totalPages) {
+      setCurrentPage(currentPage + 1);
+    }
+  };
+
+  const handlePrevPage = () => {
+    if (currentPage > 1) {
+      setCurrentPage(currentPage - 1);
+    }
+  };
+
+  useEffect(() => {
+    axios
+      .get(URL + "/blogs")
+      .then((response) => {
+        console.log(response.data);
+        setdata(response.data);
+      })
+      .catch((error) => {
+        console.log(error, "####Error####");
+      });
+  }, []);
+
   return (
     <>
       <TopBar />
@@ -21,80 +58,25 @@ export default function BlogPage() {
         </div>
 
         <div id="postGrid" className="row">
-          {
-            data.map((item,index)=>{
-              return <SingleBlog data = {item}/>
-            })
-          }
-
-          
-          {/* <div className="col-lg-4 col-md-6 col-sm-12">
-            <img src={post1} alt="" />
-            <div className="d-flex gap-2 mt-3">
-              <h6>Travel</h6>
-              <h6>13 March 2024</h6>
-            </div>
-            <h2>Train Or Bus Journey?Which one suits?</h2>
-            <p>
-              The choice between a train or bus journey depends on various
-              factors such as the distance of the journey, the time available,
-              the cost, and person
-            </p>
-            <a href={"/detail"}>
-              <h4>Read More...</h4>
-            </a>
-          </div>
-
-          <div className="col-lg-4 col-md-6 col-sm-12 mb-5 col-sm-12">
-            <img src={post2} alt="" />
-            <div className="d-flex gap-2 mt-3">
-              <h6>Travel</h6>
-              <h6>13 March 2024</h6>
-            </div>
-            <h2>Best Website to research for your next project</h2>
-            <p>
-              Capitalize on low hanging fruit to identify a ballpark value added
-              activity to beta test. Override the digital divide with additional
-              clickthroughs
-            </p>
-            <a href={"/detail"}>
-              <h4>Read More...</h4>
-            </a>
-          </div>
-
-          <div className="col-lg-4 col-md-6 col-sm-12 mb-5 pb-5">
-            <img src={post3} alt="" />
-            <div className="d-flex gap-2 mt-3">
-              <h6>Travel</h6>
-              <h6>13 March 2024</h6>
-            </div>
-            <h2>How to Be a Dancer in 2023 with proper skills?</h2>
-            <p>
-              Organically grow the holistic world view of disruptive innovation
-              via workplace diversity and empowerment. survival strategies to
-              ensure proactive
-            </p>
-            <a href={"/detail"}>
-              <h4>Read More...</h4>
-            </a>
-          </div>
-
-          <div className="col-lg-4 col-md-6 col-sm-12 mb-5 pb-5">
-            <img src={post1} alt="" />
-            <div className="d-flex gap-2 mt-3">
-              <h6>Travel</h6>
-              <h6>13 March 2024</h6>
-            </div>
-            <h2>Who is the best singer on chart?Know him?</h2>
-            <p>
-              chart by Billboard which ranks the all-time greatest artists based
-              on their performance on the weekly Billboard Hot 100 and
-            </p>
-            <a href={"/detail"}>
-              <h4>Read More...</h4>
-            </a>
-          </div> */}
+          {currentBlogs.map((item, index) => {
+            console.log(item);
+            return <SingleBlog data={item} />;
+          })}
         </div>
+
+        <div className="pagenationControl">
+          <button className="pageButton" onClick={handlePrevPage} disabled={currentPage === 1}>
+            Previous
+          </button>
+          <button className="pageButton"
+            onClick={handleNextPage}
+            disabled={currentPage === totalPages}
+          >
+            Next
+          </button>
+        </div>
+
+
       </div>
 
       <Footer />

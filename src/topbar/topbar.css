@@ -3,6 +3,7 @@
     align-items: 'center'!important;
     display: flex;
     justify-content: center;
+   
 }
 #logoTitle{
     color: inherit;
@@ -96,3 +97,17 @@ nav{
         cursor: pointer;
     }
 }
+
+
+.dropdown {
+    position: absolute !important;
+    background-color: white;
+    border: 1px solid #ccc;
+    z-index: 1000;
+    width: max-content;
+  }
+  
+  .dropdown li {
+    list-style-type: none;
+  }
+  

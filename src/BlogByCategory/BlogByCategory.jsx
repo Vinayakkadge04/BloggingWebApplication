@@ -12,7 +12,6 @@ export default function BlogByCategory() {
   const [catDetail, setCatDetail] = useState("");
 
   const { id } = useParams();
-
   const [currentPage, setCurrentPage] = useState(1);
   const [postPerPage, setpostPerPage] = useState(3);
 
@@ -76,6 +75,7 @@ export default function BlogByCategory() {
             totalPosts={data.length}
             postPerPage={postPerPage}
             setCurrentPage={setCurrentPage}
+            activePage={currentPage}
           />
         }
       </div>

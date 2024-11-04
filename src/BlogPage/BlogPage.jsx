@@ -57,6 +57,7 @@ export default function BlogPage() {
         totalPosts={data.length} 
         postPerPage={postPerPage}
         setCurrentPage={setCurrentPage} 
+        activePage={currentPage}
         />}
       </div>
 

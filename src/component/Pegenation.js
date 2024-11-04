@@ -1,7 +1,6 @@
-
 import React from 'react'
 
-function Pegenation({totalPosts , postPerPage , setCurrentPage}) {
+function Pegenation({totalPosts , postPerPage , setCurrentPage, activePage}) {
     let pages = [];
 
     for (let i = 1 ; i <= Math.ceil(totalPosts / postPerPage);i++){
@@ -12,7 +11,7 @@ function Pegenation({totalPosts , postPerPage , setCurrentPage}) {
     <div> 
         {
         pages.map((page,index)=>{
-            return <button className='pageButton' key={index} onClick={() => setCurrentPage(page)}>{page}</button>
+            return <button className={`${activePage === page ? 'pageButtonactive' : 'pageButton'}`} key={index} onClick={() => setCurrentPage(page)}>{page}</button>
         })
         
         }

@@ -18,8 +18,9 @@ export default function BlogDetail() {
     axios
       .get(URL + `/blogs/${id}`)
       .then((response) => {
-        console.log(response.data);
-        setdata1(response.data);
+        
+        setdata1({...response.data, 
+          createdAt: response.data.createdAt.split("T")[0]});
       })
       .catch((error) => {
         console.log(error, "####Error####");
@@ -42,7 +43,7 @@ export default function BlogDetail() {
     GetDetail();
     GetBlog();
   }, []);
-
+  
   return (
     <>
       <TopBar />
@@ -51,8 +52,15 @@ export default function BlogDetail() {
             <div className="main">
             <div className="detailTop">
               <div className="d-flex gap-2">
-                <h6>{data1?.category?.name}</h6>
-                <p>{data1?.createdAt?.split("T")[0]}</p>
+                <h5>{data1?.category?.name}</h5>
+                <p>
+                  {
+                    new Date(data1?.createdAt).toLocaleDateString('en-US', {
+                      year: 'numeric',
+                      month: 'long',
+                      day: 'numeric'
+                    })
+                  }</p>
               </div>
               <h1>
                {data1?.title}
@@ -80,7 +88,7 @@ export default function BlogDetail() {
     
             <div className="recentPost">
               <h1>Our Recent Post</h1>
-              <div className="primaryButton">View All</div>
+              <a style={{textDecoration:"none"}} href={"/blogs"}><div className="primaryButton">View All</div></a>
             </div>
     
             <div className="row category">

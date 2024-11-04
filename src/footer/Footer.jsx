@@ -86,7 +86,7 @@ export default function Footer() {
                 fill="#7C4EE4"
               ></path>
             </svg>
-            <p>MyLogo</p>
+            <p>AiBlog</p>
           </div>
         </a>
       </div>

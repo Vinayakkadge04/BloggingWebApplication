@@ -14,6 +14,7 @@
 .postBanner{
     width: 100%;
     height: 480px;
+    border-radius: 12px;
 }
 .discription{
     color: #666;

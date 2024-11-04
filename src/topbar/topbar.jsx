@@ -100,7 +100,7 @@ const TopBar = () => {
                 fill="#7C4EE4"
               ></path>
             </svg>
-            <p id="logoTitle">MyLogo</p>
+            <p id="logoTitle">AiBlog</p>
           </div>
         </NavLink>
         <div>
@@ -116,17 +116,10 @@ const TopBar = () => {
               <a>Categories</a>
               {dropdownOpen && (
                 <ul className="dropdown">
-                  {/* <li>
-                    <NavLink to="/blogs">Basmati</NavLink>
-                  </li>
-
-                  <li>
-                    <NavLink to="/blogs">Basmati</NavLink>
-                  </li> */}
-                  {
+                    {
                       data.map((item , index)=>(
                         <li key={index}>
-                        <NavLink to="/blogs">{item.name}</NavLink>
+                        <NavLink to={`/blogs/category/${item.id}`}>{item.name}</NavLink>
                       </li>
                       ))
                     }

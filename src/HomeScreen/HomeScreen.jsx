@@ -13,12 +13,14 @@ import { URL } from "../Utils/const";
 
 export default function HomeScreen() {
   const [data, setdata] = useState([]);
+  const [resBlog , setresBlog] = useState("");
 
   useEffect(() => {
     axios
       .get(URL + "/blogs")
       .then((response) => {
-        console.log(response.data);
+        const blogs = response.data;
+        setresBlog(response.data[response.data.length-1]);
         setdata(response.data);
       })
       .catch((error) => {
@@ -27,6 +29,7 @@ export default function HomeScreen() {
   }, []);
 
   return (
+
     <div>
       <TopBar />
 
@@ -52,62 +55,52 @@ export default function HomeScreen() {
       <div className="main">
         <div className="section2">
           <div className="banner">
-            <img className="w-100" src={homeBanner2} alt="" />
+            <img style={{ borderRadius: '12px' }} className="w-100" src={URL + resBlog?.image} alt="" />
           </div>
           <div className="section2Text">
             <div className="d-flex gap-3">
-              <p>DEVELOPMENT</p>
-              <p>16 March 2024</p>
+              <p style={{textTransform:"uppercase"}}>{resBlog?.category?.name}</p>
+              <p>{resBlog?.createdAt?.split("T")[0]}</p>
             </div>
             <h2>
-              How to make a Game look more attractive with New VR & AI
-              Technology
+             {resBlog.title}
             </h2>
             <p>
-              Google has been investing in AI for many years and bringing its
-              benefits to individuals, businesses and communities. Whether it’s
-              publishing state-of-the-art research, building helpful products or
-              developing tools and resources that enable others, we’re committed
-              to making AI accessible to everyone.
+             {resBlog.content}
             </p>
-            <div className="secondBtn">Read More</div>
+            <a style={{textDecoration:"none"}} href={`/detail/${resBlog.id}`}><div className="secondBtn">Read More</div></a> 
           </div>
         </div>
 
         {/* Recent Post Section */}
         <div className="recentPost">
           <h1>Our Recent Post</h1>
-          <div className="primaryButton">View All</div>
+          <a style={{textDecoration:"none"}} href={"/blogs"}> <div className="primaryButton">View All</div></a>
         </div>
         {/* recent Post section 2 */}
         <div className="row mainPost">
           <div className="col-md-5 col-sm-12 mainPostLeft">
-            <img className="postImg" src={homeb2} alt="" />
+            <img style={{borderRadius:"9px"}} className="postImg" src={URL + resBlog?.image} alt="" />
           </div>
           <div className="col-md-7 col-sm-12 mainPostRight">
             <div className="d-flex gap-3">
-              <h6>DEVELOPMENT</h6>
-              <h6>16 March 2024</h6>
+              <h6>{resBlog?.category?.name}</h6>
+              <h6>{resBlog?.createdAt?.split("T")[0]}</h6>
             </div>
             <h1>
-              How to make a Game look more attractive with New VR & AI
-              Technology
+             {resBlog?.title}
             </h1>
             <p>
-              Google has been investing in AI for many years and bringing its
-              benefits to individuals, businesses and communities. Whether it’s
-              publishing state-of-the-art research, building helpful products or
-              developing tools and resources that enable others, we’re committed
-              to making AI accessible to everyone.
+             {resBlog?.content}
             </p>
-            <div className="secondBtn">Read More</div>
+            <a style={{textDecoration:"none"}} href={`/detail/${resBlog.id}`}><div className="secondBtn">Read More</div></a>
           </div>
         </div>
 
         {/* Grid Section */}
 
         <div className="row category">
-          {data.slice(0,3).map((item, index) => {
+          {data.slice(1,4).map((item, index) => {
             return <SingleBlog key={index} data={item} />;
           })}
         </div>

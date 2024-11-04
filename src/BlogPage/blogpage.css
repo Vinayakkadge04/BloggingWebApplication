@@ -13,7 +13,8 @@
 }
 .blogImg{
     width: 230px;
-    height: 330px;
+    height: 200px;
+    border-radius: 9px;
 }
 #blogTop h1{
     text-align: center;
@@ -52,11 +53,18 @@
     background-color: #7C4EE4;
     color: #f6f6f6;
     padding: 5px 12px;
-    
+    margin: 10px;
+    border: none;
+    border-radius: 5px;
+    font-weight: 500;
 }
+.pageButton:disabled {
+    opacity: 0.5; 
+    cursor: not-allowed; 
+  }
 .pagenationControl{
     display: flex;
-   
+   margin-bottom: 40px;
     justify-content: end;
 }
 @media screen and (max-width :760px){

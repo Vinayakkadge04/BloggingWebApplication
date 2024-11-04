@@ -6,6 +6,7 @@ import BlogPage from "./BlogPage/BlogPage";
 import About from "./About/About";
 import Contact from "./Contact/Contact";
 import BlogDetail from "./blogDetail/BlogDetail";
+import BlogByCategory from "./BlogByCategory/BlogByCategory";
 
 export default function App() {
   return (
@@ -17,6 +18,7 @@ export default function App() {
           <Route path="/about" element={<About />} />
           <Route path="/contact" element={<Contact />} />
           <Route path="/detail/:id" element={<BlogDetail />} />
+          <Route path="/blogs/category/:id" element={<BlogByCategory/>}/>
         </Routes>
       </BrowserRouter>
     </>

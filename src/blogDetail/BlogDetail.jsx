@@ -84,13 +84,12 @@ export default function BlogDetail() {
             </div>
     
             <div className="row category">
-              {blogdata.slice(3,6).map((item, index) => {
+              {
+              blogdata.slice(3,6).map((item, index) => {
                 return <SingleBlog key={index} data={item} />;
               })}
             </div>
           </div>
-          
-       
       <Footer />
     </>
   );

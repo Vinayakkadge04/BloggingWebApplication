@@ -1,15 +1,17 @@
 import React, { useState, useEffect } from "react";
 import TopBar from "../topbar/topbar";
 import Footer from "../footer/Footer";
-import "./blogpage.css";
 import SingleBlog from "../component/singleBlog";
 import axios from "axios";
 import { URL } from "../Utils/const";
+import { useParams } from "react-router-dom";
 import Pegenation from "../component/Pegenation";
-// import { data } from "../component/blog";
 
-export default function BlogPage() {
+export default function BlogByCategory() {
   const [data, setdata] = useState([]);
+  const [catDetail, setCatDetail] = useState("");
+
+  const { id } = useParams();
 
   const [currentPage, setCurrentPage] = useState(1);
   const [postPerPage, setpostPerPage] = useState(3);
@@ -19,10 +21,9 @@ export default function BlogPage() {
 
   const currentBlogs = data.slice(indexOfFirstBlog, indexOfLastBlog);
 
-
-  useEffect(() => {
+  const GetBlogs = () => {
     axios
-      .get(URL + "/blogs")
+      .get(URL + `/blogs/category/${id}`)
       .then((response) => {
         console.log(response.data);
         setdata(response.data.reverse());
@@ -30,7 +31,24 @@ export default function BlogPage() {
       .catch((error) => {
         console.log(error, "####Error####");
       });
-  }, []);
+  };
+
+  const categoryDetail = () => {
+    axios
+      .get(URL + `/categories/${id}`)
+      .then((response) => {
+        console.log(response.data);
+        setCatDetail(response.data);
+      })
+      .catch((error) => {
+        console.log(error, "####Error####");
+      });
+  };
+
+  useEffect(() => {
+    GetBlogs();
+    categoryDetail();
+  }, [id]);
 
   return (
     <>
@@ -38,7 +56,7 @@ export default function BlogPage() {
       <div className="main">
         <div className="container" id="blogTop">
           <h6>OUR BLOGS</h6>
-          <h1>Find our all blogs from here</h1>
+          <h1>Find our {catDetail.name} blogs from here</h1>
           <p>
             our blogs are written from very research research and well known
             writers writers so that we can provide you the best blogs and
@@ -53,11 +71,13 @@ export default function BlogPage() {
           })}
         </div>
 
-        {<Pegenation 
-        totalPosts={data.length} 
-        postPerPage={postPerPage}
-        setCurrentPage={setCurrentPage} 
-        />}
+        {
+          <Pegenation
+            totalPosts={data.length}
+            postPerPage={postPerPage}
+            setCurrentPage={setCurrentPage}
+          />
+        }
       </div>
 
       <Footer />

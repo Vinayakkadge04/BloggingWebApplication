@@ -22,7 +22,8 @@ export default function SingleBlog(props) {
         
         }</h6>
       </div>
-      <h2>{props?.data?.title}</h2>
+      <a href={`/detail/${props?.data?.id}`}>
+      <h2>{props?.data?.title}</h2> </a>
       <p>
         {props?.data?.content?.slice(0,120)}...
       </p>

@@ -19,7 +19,6 @@ const TopBar = () => {
   };
 
   useEffect(() => {
-  
     axios
       .get(URL + "/categories")
       .then((response) => {
